@@ -2,7 +2,7 @@ import { EngagementInvitationProps } from '../types';
 import { MEDIA_CONFIG } from '../media';
 
 export const DEFAULT_ENGAGEMENT_PROPS: EngagementInvitationProps = {
-  groomName: 'Elmar',
+  groomName: 'Elnur',
   brideName: 'Nərmin',
   eventDate: '24 Oktyabr 2026',
   startTime: '18:00',

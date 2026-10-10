@@ -53,7 +53,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({
 
   const triggerExit = () => {
     setIsExiting(true);
-    // Smooth 1000ms cross-dissolve to avoid sudden darkness or harsh cut
+    // Smooth cross-dissolve to avoid sudden darkness or harsh cut
     setTimeout(() => {
       onComplete();
     }, 1000);
@@ -75,7 +75,6 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({
       className={`fixed inset-0 z-50 flex flex-col justify-between overflow-hidden cursor-pointer select-none transition-opacity duration-1000 ease-out ${
         isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
-      style={{ backgroundColor: isExiting ? 'transparent' : '#14030a' }}
     >
       {/* 
         Rule 1 & 5: İlk ekran engagement-cover.webp posteri ilə açılsın.
@@ -107,20 +106,9 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({
         />
       )}
 
-      {/* Top ambient soft vignette */}
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#14030a]/60 via-[#14030a]/20 to-transparent pointer-events-none" />
-
-      {/* 
-        120px Soft Ivory, Blush & Champagne-Gold Gradient Transition Mask:
-        Keçid zamanı qəfil qaralma və ya kəskin xətt olmaması üçün 120px yumşaq gradient
-      */}
-      <div
-        className={`absolute inset-x-0 bottom-0 pointer-events-none transition-all duration-1000 ease-out ${
-          isExiting
-            ? 'h-[140px] bg-gradient-to-t from-[#14030a]/90 via-[#eed5cb]/25 to-transparent'
-            : 'h-[120px] bg-gradient-to-t from-[#14030a]/80 via-[#f6ecd9]/15 to-transparent'
-        }`}
-      />
+      {/* Very soft feather gradient at top and bottom - no hard edges */}
+      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[rgba(24,5,8,0.3)] to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[rgba(24,5,8,0.4)] via-[rgba(24,5,8,0.15)] to-transparent pointer-events-none" />
 
       {/* Empty Top Area */}
       <div className="relative z-10 p-6" />
