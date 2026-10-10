@@ -1,0 +1,6 @@
+{
+  "name": "Lüks Nişan Dəvətnaməsi",
+  "description": "Premium mobil-first nişan dəvətnaməsi, xüsusi video animasiyalar və dinamik idarəetmə paneli ilə.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

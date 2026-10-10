@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-cinzel: "Cinzel", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #14030a;
+    color: #fcf9f4;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Refined Champagne-Gold & Ivory Typography */
+.text-champagne-silk {
+  background: linear-gradient(180deg, #ffffff 15%, #f6ecdc 55%, #dfcbb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-champagne-gold {
+  background: linear-gradient(135deg, #f7ecd9 0%, #d8c29d 45%, #bfa478 80%, #ebd8bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ethereal, Airy Glass Surfaces (NO heavy dark cards or thick borders) */
+.ethereal-veil {
+  background: rgba(22, 4, 12, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(229, 213, 188, 0.16);
+}
+
+.ethereal-subtle {
+  background: rgba(26, 6, 15, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(229, 213, 188, 0.12);
+}
+
+/* 120px Soft Ivory, Blush & Champagne-Gold Gradient Transition Mask */
+.transition-veil-120 {
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 248, 243, 0) 0%,
+    rgba(247, 235, 230, 0.12) 30%,
+    rgba(235, 216, 189, 0.18) 60%,
+    rgba(22, 4, 12, 0.75) 100%
+  );
+}
+
+/* Subtle breathing pulse animation */
+@keyframes delicate-float {
+  0%, 100% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.animate-delicate-float {
+  animation: delicate-float 3.5s ease-in-out infinite;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(18, 3, 10, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(216, 194, 157, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(216, 194, 157, 0.5);
+}
